@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type ="text/css" href="../css/main.css">
+		 <meta charset="UTF-8"> 
+	</head>	
+	<body>
+<div class="container center_div">
+    <div class="row vertical-offset-100">
+    	<div class="col-md-4 col-md-offset-4">
+    		<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Central de Reservas</h3>
+			 	</div>
+			  	<div class="panel-body">
+						<div id="alertError" class="alert alert-danger alert-dismissable fade in">
+  							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  								<div id="alertText"></div>
+						</div>
+			    	<form accept-charset="UTF-8" role="form">
+                 <fieldset>
+			    	  	<div class="form-group">
+			    		    <input id="userLogin" class="form-control" placeholder="E-mail" name="email" type="text">
+			    		</div>
+			    		<div class="form-group">
+			    			<input id="passwordLogin" class="form-control" placeholder="Password" name="password" type="password" value="">
+			    		</div>
+			    		<div class="checkbox">
+			    	    	<label>
+			    	    		<input name="remember" type="checkbox" value="Remember Me"> Recordarme
+			    	    	</label>
+			    	    </div>
+							<p class="text-center"><a id="btnLogin" class="btn btn-lg btn-success btn-block" role="button" >Acceder</a></p>
+			    	</fieldset>
+							<p class="text-center"><a id="btnRegistrarMe" href="#myModal" class="btn" role="button" data-toggle="modal">Registrarme</a></p>
+			      	</form>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="container center_div_form modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="row vertical-offset-100">
+    	<div class="col-md-4 col-md-offset-4">
+    		<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Formulario de Registro</h3>
+			 	</div>
+			  	<div class="panel-body">					
+					<div id="tipoAlerta" class="alert alert-info">
+						<div id="mensajeAlerta">
+						<strong>Todos los campos son requeridos.&nbsp;</strong>Las contraseñas han de tener una longitud mínima de 6 dígitos y han de coincidir
+						</div>
+					</div>
+			    	<form id="formularioRegistro" accept-charset="UTF-8" role="form" action="/">
+                    <fieldset>
+			    	  	<div class="form-group">
+									<label for="email">Dirección de mail</label>
+    							<input type="email" class="form-control" id = "userName" name="userName" placeholder="ejemplo@test.com" value="" required/>
+			    		</div>
+			    		<div class="form-group">
+			    		    <label for="password">Contraseña</label>
+    							<input class="form-control" id = "password"  placeholder="password" name="password" type="password" value="" required>
+			    		</div>
+			    		<div class="form-group">
+			    		    <label for="password2">Valide Contraseña</label>
+    							<input class="form-control" placeholder="password" id = "password1" name="password" type="password" value="" required>
+			    		</div>											
+			    		<input id = "btnRegistrar" class="btn btn-lg btn-success btn-block" type="button" value="Registrarme" disabled>
+			    	</fieldset>
+			      	</form>
+			    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Modal -->
+<div id="myModalMsgs" class="container center_div_msg modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="row vertical-offset-100">
+    	<div class="col-md-4 col-md-offset-4">
+    		<div id ="panelType" class="panel panel-danger">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title"></h3>
+			 		</div>
+			  	<div class="panel-body text-center"><!-- Aquí irá el texto que le pasemos cada vez desde javascript --></div>
+					<div class="panel-footer text-center">
+						<button id="btnModalAceptar" type="button" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Aceptar</button>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>		
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../js/main.js"></script>
+</html>

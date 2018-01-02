@@ -1,0 +1,110 @@
+body
+{
+	background: url("../imgs/costa%20rica%20earth%20map.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.center_div{
+    margin: 20em auto;
+    width:80%; /* value of your choice which suits your alignment */
+}
+
+.center_div_form{
+    margin: 15em auto;
+    width:100%; /* value of your choice which suits your alignment */
+}
+
+.center_div_form_taxis{
+    margin: 3em auto;
+    width:100%; /* value of your choice which suits your alignment */
+}
+
+
+.center_div_admin{
+    margin: 3em auto;
+    width: 80%; /* value of your choice which suits your alignment */
+}
+
+.center_div_vReservas{
+    margin-left: -25em;
+		margin-top:15em;
+		margin-bottom: auto;
+		margin-right: 35em;
+    width: 175em; /* value of your choice which suits your alignment */
+}
+
+
+.center_div_msg{
+    margin: 20em auto;
+    width:80%; /* value of your choice which suits your alignment */
+}
+
+
+/* CSS de la página de administración */
+.huge {
+    font-size: 50px;
+    line-height: normal;
+}
+
+.panel-green {
+    border-color: #5cb85c;
+}
+
+.panel-green > .panel-heading {
+    border-color: #5cb85c;
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.panel-green > a {
+    color: #5cb85c;
+}
+
+.panel-green > a:hover {
+    color: #3d8b3d;
+}
+
+.panel-red {
+    border-color: #d9534f;
+}
+
+.panel-red > .panel-heading {
+    border-color: #d9534f;
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.panel-red > a {
+    color: #d9534f;
+}
+
+.panel-red > a:hover {
+    color: #b52b27;
+}
+
+.panel-yellow {
+    border-color: #f0ad4e;
+}
+
+.panel-yellow > .panel-heading {
+    border-color: #f0ad4e;
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+.panel-yellow > a {
+    color: #f0ad4e;
+}
+
+.panel-yellow > a:hover {
+    color: #df8a13;
+}
+
+ #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+ }

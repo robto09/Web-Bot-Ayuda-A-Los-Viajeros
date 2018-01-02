@@ -1,0 +1,359 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type ="text/css" href="../css/main.css">
+	</head>	
+	<body>
+        <div id="primaryPanelUsers" class="panel panel-primary center_div_admin">
+            <div class="panel-heading">
+								<span class="text-left">
+									<button type="button" id="closeUser" class="close" 
+									data-target="#primaryPanelUsers" 
+									data-dismiss="alert">
+									<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+									</button>
+								</span>
+                <h3 class="panel-title text-right"><span><label for="usuario"></label></span>&nbsp;<span><i class="fa fa-user fa-2x"></i></span></h3>
+            </div>
+            <div class="panel-body">
+                <!-- Inicio del Panel de Opciones -->
+                <div class="row">
+                    <!-- Panel para las líneas aereas -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-plane fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div id="NumAirLines" class="huge numAirlinesUser">0</div>
+                                        <div>Líneas Aereas</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin del panel para las líneas aereas -->
+                    <!-- Panel para las líneas ferroviarias -->                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-train fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge numTrainLinesUser">0</div>
+                                        <div>Líneas Ferroviarias</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin del panel para las líneas ferroviarias -->
+                    <!-- Panel para las líneas de autobus -->                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-bus fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge numBusLinesUser">0</div>
+                                        <div>Líneas de Autobus</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin del panel para las líneas de autobus -->                    
+                    <!-- Panel para las líneas de taxi -->                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-taxi fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge numTaxiLinesUser">0</div>
+                                        <div>Líneas de Taxi</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin del panel para las líneas de taxi -->                                        
+                </div>
+                <!-- Fin del Panel de Opciones -->                
+							<div class="row">											
+									<!--Aqui van los check box para que el usuario escoja
+											el medio de transporte que quiere usar -->
+										<div class="col-lg-6">
+											<div class="panel panel-primary">
+												<div class="panel-heading">
+													Medios de tranporte a considerar
+												</div>
+												<div class="panel-body">
+													<form accept-charset="UTF-8" action="/">
+													<fieldset>
+														<div class="row">
+															<div class="form-group">
+															<div class="col-xs-6">
+																<div class="form-control text-center">
+																	<label for="chkAv">Avión
+																	<input id="chkAv" type="checkbox" checked/>
+																	</label>
+																</div>
+															</div>
+															<div class="col-xs-6">
+																<div class="form-control text-center">
+																	<label for="chkTr">Tren
+																	<input id="chkTr" type="checkbox" checked/>
+																	</label>
+																</div>
+															</div>
+															</div>
+															<div><p><br/></p></div>
+															<div class="form-group">
+															<div class="col-xs-6">
+																<div class="form-control text-center">
+																	<label for="chkBus">Autobús
+																	<input id="chkBus" type="checkbox" checked/>
+																	</label>
+																</div>
+															</div>
+															<div class="col-xs-6">
+																<div class="form-control text-center">
+																	<label for="chkTaxi">Taxi
+																	<input id="chkTaxi" type="checkbox" checked/>
+																	</label>
+																</div>
+															</div>
+															</div>
+														</div>
+													</fieldset>
+													</form>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-3">
+											<div class="panel panel-primary">
+												<div class="panel-heading">
+													Opciones
+												</div>
+												<div class="panel-body">
+													<form accept-charset="UTF-8" action="/">
+														<fieldset>
+															<div class="row">
+																<div class="form-group">
+																	<div class="col-xs-12">
+																	<div class="form-control text-center">
+																		<label for="RadioTime">Tiempo
+																			<input type="radio" name="radioOptions" id="RadioTime" value="tiempo" checked/>
+																		</label>
+																	</div>
+																		</div>
+																</div>
+																<div><p><br/></p></div>
+																<div class="form-group">										
+																	<div class="col-xs-12">
+																	<div class="form-control text-center">
+																		<label for="RadioMoney">Dinero
+																			<input type="radio" name="radioOptions" id="RadioMoney" value="precio"/>
+																		</label>
+																	</div>
+																		</div>
+																</div>
+															</div>
+														</fieldset>
+													</form>
+												</div>
+											</div>
+										</div>																				
+										<div class="col-lg-3">
+											<div class="panel panel-primary">
+												<div class="panel-heading">
+													Rutas
+												</div>
+												<div class="panel-body">
+														<form accept-charset="UTF-8" action="/">
+														<fieldset>
+															<div class="row">
+																<div class="form-group">
+																	<div class="col-xs-12">
+																	<div class="form-group">
+																		<label class="col-xs-2 control-label" for="InicioRutaUsers">Inicio</label>
+																		<div class="col-xs-10">
+																			<select class="form-control"id="InicioRutaUsers"></select>				</div>														
+																	</div>
+																	</div>
+																	</div>
+																<div><p><br/></p></div>
+																<div class="form-group">
+																	<div class="col-xs-12">
+																	<div class="form-group">
+																		<label class="col-xs-2 control-label" for="FinalRutaUsers">Final</label>
+																		<div class="col-xs-10">
+																			<select class="form-control"id="FinalRutaUsers"></select>				</div>														
+																	</div>
+																	</div>
+																	</div>
+																	
+															</div>
+														</fieldset>
+													</form>
+												</div>
+											</div>
+										</div>																												
+							</div>
+							<div class="row">											
+									<!--Aqui van los check box para que el usuario escoja
+											el medio de transporte que quiere usar -->
+										<div class="col-lg-5">
+											<div class="panel panel-success">
+												<div class="panel-heading">
+													Mapa de Rutas
+												</div>
+												<div id = "map" class="panel-body"></div>												
+											</div>
+										</div>
+										<div class="col-lg-7">
+											<div class="panel panel-success">
+												<div class="panel-heading">													
+													<div class="row">
+														<div class="col-xs-2">Recorridos</div>					
+														<div class="col-xs-10 text-right"><button class="text-center btn btn-md btn-success" disabled id="BtnProcesar">Procesar</button></div>					
+														
+													</div>
+												</div>
+												<div class="panel-body">
+														<div>
+														<fieldset>
+															<div class="row">
+																<div class="form-group">
+																	<div class="col-xs-8">
+																	<div class="form-group">
+																		<label class="col-xs-4 control-label" for="fechaViaje">Fecha Reserva</label>
+																		<div class="col-xs-6">														<input id="fechaViaje"type="datetime-local" class="form-control" value=""/>						
+																		</div>																		
+																	</div>
+																	</div>																	
+																	<div class="col-xs-4">
+																		<div class="form-group">
+																			<label class="col-xs-offset-2 col-xs-6 control-label" for="numPasajes">Nº Pasajes</label>
+																			<div class="col-xs-4">
+																				<input id="numPasajes" type="text" class="form-control text-right" value="1"/>															 
+																			</div>
+																		</div>
+																	</div>
+																	</div>
+															</div>
+															<br/>
+															<div id="espacioTabla">
+																		<table class="table table-striped table-bordered table-condensed table-hover"  id ="tablaRecorridos">
+																			<thead>
+																				<tr>
+																					<td>
+																						Agencia
+																					</td>
+																					<td>
+																						Recorrido
+																					</td>
+																					<td>
+																						Precio
+																					</td>
+																					<td class="text-center">
+																						Rsv
+																					</td>
+																				</tr>
+																			</thead>
+																			<tbody>								
+																			</tbody>
+																		</table>
+																<div class="row">
+																<div class="text-left col-xs-6">
+																<a id="btnVerReservas" rol="button" class="btn btn-success" data-toggle="modal" href="#myModalRsvView" disabled>Ver Reservas</a>
+																</div>
+																<div class="text-right col-xs-6">
+																<a id="btnReservar" rol="button" class="btn btn-success" data-toggle="modal" href="#myModalRsvConf">Reservar</a>
+																</div>
+																</div>
+																</div>
+														</fieldset>
+													</div>													
+												</div>
+											</div>
+										</div>																				
+							</div>							
+            </div>
+        </div>		
+
+				<!-- Modal -->
+				<div id="myModalRsvConf" class="container center_div_msg modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalRsvConfLabel">
+						<div class="row vertical-offset-100">
+							<div class="col-md-4 col-md-offset-4">
+								<div id ="panelType" class="panel panel-success">
+									<div class="panel-heading">
+										<h3 class="panel-title"></h3>
+									</div>
+									<div class="panel-body text-center"><!-- Aquí irá el texto que le pasemos cada vez desde javascript --></div>
+									<div class="panel-footer text-center">
+										<button id="btnModalConfRsv" type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Aceptar</button>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>		
+		
+				<!-- Modal -->
+				<div id="myModalRsvView" class="container center_div_vReservas modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalRsvViewLabel">
+						<div class="row vertical-offset-100">
+							<div class="col-md-4 col-md-offset-4">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">Resumen de Reservas</h3>
+								</div>
+									<div class="panel-body">					
+									<div id="tipoAlerta" class="alert alert-info">
+										<div id="mensajeAlerta">
+										A continuación se muestra el detalle de sus reservas.
+										</div>
+									</div>
+										<form id="formularioTablaReservas" accept-charset="UTF-8" role="form">
+														<fieldset>
+												<table class="table table-striped table-bordered table-condensed table-hover" id="tablaVerReservas">
+													<thead>
+														<tr>
+															<td class="text-center">Agencia</td>
+															<td class="text-center">Inicio Ruta</td>
+															<td class="text-center">Final Ruta</td>
+															<td class="text-center">Nº Pasajeros</td>
+															<td class="text-center">Precio</td>
+														</tr>
+													</thead>
+													<tbody>
+													</tbody>
+												</table>							
+											<input id = "btnRegistrar" class="btn btn-lg btn-success btn-block" type="button" value="Aceptar" data-dismiss="modal"  >
+										</fieldset>
+											</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+		
+	
+	</body>			
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>		
+		<script src="../js/user.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD7_5Rlyng_3GdP2hDwk6-tVQRSda4hjQ&callback=initMap"></script>
+    <script src="https://use.fontawesome.com/d388c8c3d3.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</html>
